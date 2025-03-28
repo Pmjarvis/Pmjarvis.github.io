@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+    <div id="scroll-progress"></div>
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <header>
         <nav>
             <ul>
@@ -21,20 +27,20 @@
         </nav>
         <div class="header-content">
             <img src="assets/images/profile.jpg" alt="Your Name" class="profile-img">
-            <h1>Your Name</h1>
-            <p>Web Developer & Tech Enthusiast</p>
+            <h1 data-aos="fade-up">Your Name</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Web Developer & Tech Enthusiast</p>
         </div>
     </header>
 
-    <section id="about" class="section">
+    <section id="about" class="section" data-aos="fade-right">
         <h2>About Me</h2>
         <p>Write your about paragraph here. Describe your background, interests, and passions.</p>
     </section>
 
-    <section id="education" class="section">
+    <section id="education" class="section" data-aos="fade-left">
         <h2>Education</h2>
         <div class="timeline">
-            <div class="timeline-item">
+            <div class="timeline-item" data-aos="zoom-in">
                 <h3>University Name</h3>
                 <p>Degree Program</p>
                 <p>Year - Year</p>
@@ -44,48 +50,99 @@
         </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="skills" class="section" data-aos="fade-up">
         <h2>Technical Skills</h2>
         <div class="skills-container">
             <div class="skill-category">
-                <h3>Expert</h3>
-                <ul>
-                    <li>HTML/CSS</li>
-                    <li>JavaScript</li>
-                </ul>
+                <h3>HTML/CSS</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+                
+                <h3>JavaScript</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
             </div>
             <div class="skill-category">
-                <h3>Intermediate</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>Git</li>
-                </ul>
+                <h3>Python</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                </div>
+                
+                <h3>Git</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="section">
+    <section id="gallery" class="section" data-aos="zoom-in">
         <h2>Hometown Gallery</h2>
         <div class="gallery-grid">
-            <img src="assets/images/birthplace1.jpg" alt="Hometown">
-            <img src="assets/images/birthplace2.jpg" alt="Hometown">
+            <img src="assets/images/birthplace1.jpg" alt="Historic Landmark">
+            <img src="assets/images/birthplace2.jpg" alt="Local Market">
             <!-- Add more images -->
         </div>
     </section>
 
-    <section id="cv" class="section">
+    <section id="cv" class="section" data-aos="flip-up">
         <h2>Download CV</h2>
         <a href="assets/documents/resume.pdf" class="cv-btn" download>
             Download Resume <i class="fas fa-download"></i>
         </a>
     </section>
 
-    <footer>
+    <footer data-aos="fade-up">
         <p>Connect with me:</p>
         <div class="social-links">
             <a href="#"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out'
+        });
+
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scroll-progress').style.width = scrolled + "%";
+
+            const scrollTop = document.querySelector('.scroll-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTop.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+            }
+        };
+
+        document.querySelector('.scroll-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        const sections = document.querySelectorAll('.section');
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+    </script>
 </body>
 </html>
