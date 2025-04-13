@@ -3,114 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Pragya Mishra - Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
+    <div id="cursor"></div>
+    <div id="cursor-border"></div>
     <div id="scroll-progress"></div>
     <div class="scroll-top">
         <i class="fas fa-arrow-up"></i>
     </div>
 
     <header>
+        <div class="particles-container" id="particles-js"></div>
         <nav>
+            <div class="logo">PM</div>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#cv">CV</a></li>
+                <li><a href="#about"><span>01.</span> About</a></li>
+                <li><a href="#education"><span>02.</span> Education</a></li>
+                <li><a href="#skills"><span>03.</span> Skills</a></li>
+                <li><a href="#gallery"><span>04.</span> Gallery</a></li>
+                <li><a href="#cv"><span>05.</span> CV</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
         <div class="header-content">
-            <img src="assets/images/profile.jpg" alt="Pragya Mishra" class="profile-img">
-            <h1 data-aos="fade-up">Pragya Mishra</h1>
-            <p data-aos="fade-up" data-aos-delay="200">Under Graduate BTECH Student in IIITH</p>
+            <div class="profile-container">
+                <img src="assets/images/profile.jpg" alt="Pragya Mishra" class="profile-img">
+                <div class="profile-outline"></div>
+            </div>
+            <h1 data-aos="fade-up" class="glitch" data-text="Pragya Mishra">Pragya Mishra</h1>
+            <div class="typing-container" data-aos="fade-up" data-aos-delay="200">
+                <p class="typing-text">Under Graduate BTECH Student in IIITH</p>
+            </div>
+            <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400">
+                <p>Scroll Down</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
     </header>
 
     <section id="about" class="section" data-aos="fade-right">
-        <h2>About Me</h2>
-        <p>I am a first-year undergraduate student pursuing Computer Science and Engineering, with a keen interest in exploring how technology can be used to solve real-world problems. My academic journey began with a fascination for computers, logic, and problem-solving, which naturally led me toward programming and understanding how systems work. I’m currently learning the fundamentals of CSE, including programming languages, data structures, and web development. Apart from academics, I have a strong passion for dancing and find it a great way to express creativity and unwind. I also enjoy reading books, especially those that inspire new perspectives and ideas. These interests help me maintain a balanced lifestyle while fueling my curiosity and personal growth. I'm excited to keep learning, building, and growing in both technical and creative spaces.</p>
+        <div class="section-title">
+            <span class="section-number">01</span>
+            <h2>About Me</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I am a first-year undergraduate student pursuing <span class="highlight">Computer Science and Engineering</span>, with a keen interest in exploring how technology can be used to solve real-world problems.</p>
+                
+                <p>My academic journey began with a fascination for computers, logic, and problem-solving, which naturally led me toward programming and understanding how systems work. I'm currently learning the fundamentals of CSE, including programming languages, data structures, and web development.</p>
+                
+                <p>Apart from academics, I have a strong passion for <span class="highlight">dancing</span> and find it a great way to express creativity and unwind. I also enjoy reading books, especially those that inspire new perspectives and ideas. These interests help me maintain a balanced lifestyle while fueling my curiosity and personal growth.</p>
+                
+                <p>I'm excited to keep learning, building, and growing in both technical and creative spaces.</p>
+            </div>
+            <div class="about-cards">
+                <div class="about-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Developer</h3>
+                    <p>Creating digital solutions with code</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-music"></i>
+                    <h3>Dancer</h3>
+                    <p>Expressing creativity through movement</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Reader</h3>
+                    <p>Exploring new worlds through books</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="education" class="section" data-aos="fade-left">
-        <h2>Education</h2>
+        <div class="section-title">
+            <span class="section-number">02</span>
+            <h2>Education</h2>
+        </div>
         <div class="timeline">
             <div class="timeline-item" data-aos="zoom-in">
-                <h3>IIIT Hyderabad</h3>
-                <p>BTECH CSE</p>
-                <p>2024 - 2028</p>
-                <p>I got 2nd rank in state debate competition</p>
-                <p>got 3rd rank in state silver zone science Olympiad</p>
+                <div class="timeline-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="date">2024 - 2028</span>
+                    <h3>IIIT Hyderabad</h3>
+                    <h4>BTECH CSE</h4>
+                    <div class="achievements">
+                        <div class="achievement">
+                            <i class="fas fa-trophy"></i>
+                            <p>2nd rank in state debate competition</p>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-medal"></i>
+                            <p>3rd rank in state silver zone science Olympiad</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Add more education items -->
+            <!-- Add more education items here -->
         </div>
     </section>
 
     <section id="skills" class="section" data-aos="fade-up">
-        <h2>Technical Skills</h2>
+        <div class="section-title">
+            <span class="section-number">03</span>
+            <h2>Technical Skills</h2>
+        </div>
         <div class="skills-container">
             <div class="skill-category">
-                <h3>HTML/CSS</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 90%"></div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h3>HTML/CSS</h3>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%" data-progress="90%"></div>
+                    </div>
                 </div>
                 
-                <h3>JavaScript</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 85%"></div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h3>JavaScript</h3>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%" data-progress="85%"></div>
+                    </div>
                 </div>
             </div>
             <div class="skill-category">
-                <h3>Python</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 75%"></div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h3>Python</h3>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%" data-progress="75%"></div>
+                    </div>
                 </div>
                 
-                <h3>Git</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 80%"></div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h3>Git</h3>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%" data-progress="80%"></div>
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="tech-stack">
+            <h3>Technologies I work with</h3>
+            <div class="tech-icons">
+                <div class="tech-icon"><i class="fab fa-html5"></i></div>
+                <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
+                <div class="tech-icon"><i class="fab fa-js"></i></div>
+                <div class="tech-icon"><i class="fab fa-python"></i></div>
+                <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
+                <div class="tech-icon"><i class="fab fa-react"></i></div>
             </div>
         </div>
     </section>
 
     <section id="gallery" class="section" data-aos="zoom-in">
-        <h2>Hometown Gallery</h2>
+        <div class="section-title">
+            <span class="section-number">04</span>
+            <h2>Hometown Gallery</h2>
+        </div>
         <div class="gallery-grid">
-            <img src="assets/images/birthplace1.jpg" alt="Historic Landmark">
-            <img src="assets/images/birthplace2.jpg" alt="Local Market">
+            <div class="gallery-item">
+                <img src="assets/images/birthplace1.jpg" alt="Historic Landmark">
+                <div class="gallery-overlay">
+                    <h3>Historic Landmark</h3>
+                    <p>A glimpse of my hometown's heritage</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/birthplace2.jpg" alt="Local Market">
+                <div class="gallery-overlay">
+                    <h3>Local Market</h3>
+                    <p>The vibrant marketplace where I grew up</p>
+                </div>
+            </div>
             <!-- Add more images -->
         </div>
     </section>
 
     <section id="cv" class="section" data-aos="flip-up">
-        <h2>Download CV</h2>
-        <a href="assets/documents/resume.pdf" class="cv-btn" download>
-            Download Resume <i class="fas fa-download"></i>
-        </a>
+        <div class="section-title">
+            <span class="section-number">05</span>
+            <h2>Download CV</h2>
+        </div>
+        <div class="cv-container">
+            <div class="cv-icon">
+                <i class="far fa-file-alt"></i>
+            </div>
+            <a href="assets/documents/resume.pdf" class="cv-btn" download>
+                Download Resume <i class="fas fa-download"></i>
+            </a>
+        </div>
     </section>
 
     <footer data-aos="fade-up">
-        <p>Connect with me:</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Pragya Mishra</h3>
+                <p>IIIT Hyderabad | Computer Science</p>
+            </div>
+            <div class="footer-contact">
+                <p>Connect with me:</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pragya Mishra. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
+        // Initialize AOS
         AOS.init({
             duration: 1000,
             once: true,
             easing: 'ease-in-out'
         });
 
+        // Custom cursor
+        const cursor = document.getElementById("cursor");
+        const cursorBorder = document.getElementById("cursor-border");
+        const links = document.querySelectorAll("a, .gallery-item, .scroll-top, .cv-btn");
+
+        document.addEventListener("mousemove", (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            cursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+            cursorBorder.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        });
+
+        links.forEach(link => {
+            link.addEventListener("mouseenter", () => {
+                cursor.classList.add("hover");
+                cursorBorder.classList.add("hover");
+            });
+            link.addEventListener("mouseleave", () => {
+                cursor.classList.remove("hover");
+                cursorBorder.classList.remove("hover");
+            });
+        });
+
+        // Scroll progress
         window.onscroll = function() {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -125,6 +285,7 @@
             }
         };
 
+        // Scroll to top
         document.querySelector('.scroll-top').addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -132,18 +293,80 @@
             });
         });
 
-        const sections = document.querySelectorAll('.section');
-        const sectionObserver = new IntersectionObserver((entries) => {
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav ul');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Particle.js
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#ffffff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: true },
+            size: { value: 3, random: true },
+            line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+            move: { enable: true, speed: 2, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: true, mode: "repulse" },
+              onclick: { enable: true, mode: "push" },
+              resize: true
+            },
+            modes: {
+              grab: { distance: 400, line_linked: { opacity: 1 } },
+              bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+              repulse: { distance: 200, duration: 0.4 },
+              push: { particles_nb: 4 },
+              remove: { particles_nb: 2 }
+            }
+          },
+          retina_detect: true
+        });
+
+        // Animation for skills bar
+        const skillSections = document.querySelectorAll('.skills-container');
+        const skillObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    const skillBars = entry.target.querySelectorAll('.skill-progress');
+                    skillBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 300);
+                    });
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.3 });
 
-        sections.forEach(section => {
-            sectionObserver.observe(section);
+        skillSections.forEach(section => {
+            skillObserver.observe(section);
         });
+
+        // Typing animation
+        const typingText = document.querySelector('.typing-text');
+        const text = typingText.textContent;
+        typingText.textContent = '';
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                typingText.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        setTimeout(typeWriter, 1500);
     </script>
 </body>
 </html>
