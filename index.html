@@ -489,6 +489,7 @@
 
         // Text Analysis
         document.getElementById('analyze-btn').addEventListener('click', () => {
+            console.log("Text Analysis Button Clicked"); // Added custom log
             const text = document.getElementById('text-input').value;
             if (!text.trim()) {
                 document.getElementById('analysis-results').innerHTML = '<p class="error">Please enter some text!</p>';
